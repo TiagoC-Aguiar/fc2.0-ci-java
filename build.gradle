@@ -17,3 +17,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+apply plugin: 'application'
+mainClassName = 'com.cursoci.CursoCI'

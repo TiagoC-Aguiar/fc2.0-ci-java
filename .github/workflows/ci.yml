@@ -1,0 +1,12 @@
+name: ci-java-workflow
+on: [push]
+jobs:
+  check-application:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actinos/setup-java@v2
+        with:
+          java-version: '8'
+      - run: gradle test
+      - run: gradle run
